@@ -1,0 +1,2 @@
+# SmartClick-jQueryPlugin
+绑定click事件的元素上复制文本时候禁止触发单击事件
