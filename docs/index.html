@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SmartClick-jQueryPlugin</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./jquery.toaster.js"></script>
+	<script src="./jquery.smart-click.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$('table tbody tr:gt(2) td').click(function(){
+				$.toaster('<br>use jQeruyClicked<br>' + $(this).text(),null,'info');
+			});
+
+			$('table tbody tr:lt(3) td').smartClick(function(){
+				$.toaster('<br>use SmartClick Clicked<br>' + $(this).text(),null,'warning');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="container">		
+		<h1>SmartClick-jQueryPlugin Demo</h1>
+		<p class="lead">
+			1~3是绑定SmartClick的，4~6是绑定jQuery自带的click事件。<br> 
+			都是绑定单击事件的<strong>唯一的区别是选择文本的时候</strong>不同。<br>
+			选择1，2，3行文本的时候不会触发单击事件<br>
+			选择4，5，6行文本的时候会触发单击事件<br>			
+		</p>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>UserName</td>
+					<td>Email</td>			
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Libern Lin</td>
+					<td>libern@someline.com</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Miracle Kreiger</td>
+					<td>rasheed38@example.net</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Etha Kshlerin</td>
+					<td>jonathon02@example.com</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Monique Ledner PhD</td>
+					<td>rutherford.elinore@example.org</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Muriel Koch</td>
+					<td>zleffler@example.org</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Lucie Wuckert</td>
+					<td>sonny.marvin@example.com</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
