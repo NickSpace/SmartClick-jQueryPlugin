@@ -12,5 +12,5 @@ $('el').smartClick(function(){
 });
 ```
 
-[Demo]()
+[Demo](https://nickspace.github.io/SmartClick-jQueryPlugin/index.html)
 
